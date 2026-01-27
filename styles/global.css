@@ -1,0 +1,20 @@
+/* sempre linkar o global com o index atravez do @import */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* ao iniciar o Root, colocar toda as informaces gerais do projto que vai ser aplicado em tudo, ate para poder puxar as informacoes mais facilmente */
+:root {
+--brand-color-light: #60A5FA;
+--brand-color-dark: #1D4ED8;
+--bg-color: #0F172A;
+--stroke-color: #1E293B; 
+--text-color-primary: #F1F5F9;
+--text-color-secondary: #CBD5E1;
+}
+/* usando o VAR, eu trago a informacao do root para o body que aplica em tudo */
+body {
+color: var(--text-color-primary);
+background-color: var(--bg-color);
+}
