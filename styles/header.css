@@ -1,0 +1,28 @@
+#primary {
+  /* padding block significa que estou pegando o eixo vertical (em cima e em baixo) para aplicar o espacamento de 20px */
+  padding-block: 20px;
+
+  /* o foco aqui e o grid, mas o flex resolve melhor que o grid nesse momento */
+  div{
+    display: flex;
+    align-self: center;
+    gap: 8px;
+  }
+
+  div:nth-child(2) {
+    /* margin-inline significa que estou pegando o eixo horizontal (esquerda e direita) para centralizar o elemento */
+    margin-inline: auto;
+  }
+
+  div:nth-child(3) {
+    /* aqui, jogamos o filho 3 que e o buscar e a lupa toda para a direita. */
+    justify-self: end;
+  }
+}
+
+#secondary {
+padding-block: 14px;
+border: solid 1px var(--stroke-color);
+border-inline: none;
+justify-content: space-between;
+}
