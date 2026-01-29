@@ -1,0 +1,8 @@
+#featured{
+  /* aqui, estou estilizando as imagens, colocando a altura certa pra nao ficar espaco sobrando porque tem algumas imagens que sao maiores e outras menores. Mas so colocar altura, estica a imagem, entao o object-fit: cover faz com que ela nao fique esticada e se enquadre no espaco bem certinho. e o Border Radius e pra dar aquela arredondada nas pontas.*/
+  img {
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+}

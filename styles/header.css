@@ -8,6 +8,15 @@
     align-self: center;
     gap: 8px;
   }
+/* quando eu fiz uma altecao nas imagens do main, por algum motivo, mudou o tamanho do ICON do header. por isso eu tentei arrumar sozinho indo no primary e selecionando a nth-child(1) e coloando 24px de width. mas o AI assistant disse que o melhor caminho seria dar uma classe para o ICON e mudar ele isoladamente. Foi o que eu fiz, mas so deixando registrado em comentarios a minha tentativa que deu certo! > eu fiz o que o AIA faltou, mas o size do icone eta desparelho do size da palavra MENU.> assim, quebrei a cabeca, mas nao consegui resolver.. tive que ajustar  com width 17px e height auto....*/
+
+.menu-icon {
+  width: 17px;
+  height: auto;
+}
+
+  /* .div:nth-child(1) { */
+    /* width: 24px;} */
 
   div:nth-child(2) {
     /* margin-inline significa que estou pegando o eixo horizontal (esquerda e direita) para centralizar o elemento */
