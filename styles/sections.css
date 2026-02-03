@@ -32,6 +32,12 @@
       bottom: 0%;
       /* adicionamos o padding pra ficar mais espacado */
       padding: 24px;
+
+      /* &:has significa que queremos saber se o figcaption tem um elemento com a classe text-lg dentro dele, e se tiver, aplicar o codigo especificamente no elemento, nesse caso, se no figcaption (&:) tem (has) um texto que e large (.text-lg), quero um padding top de 8px*/
+      &:has(.text-lg){
+      padding-top: 12px;
+      }
+
       /* adicionamos o margin top no H2 para dar uma distanciada do span ROBOTICA */
       h2{
         margin-top: 8px;
