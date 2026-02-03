@@ -3,6 +3,40 @@
   img {
     height: 100%;
     object-fit: cover;
-    border-radius: 4px;
   }
+  /* coloquei a class CARD na div da primeira imagem par colocar o fundo degrade. */
+  .card {
+  overflow: hidden;
+  /* o overflow hidden esconde o que estiver fora do elemento, e como a imagem tem um border-radius, o overflow hidden faz com que a imagem fique dentro do círculo arredondado nos cantos. */
+  border-radius: 4px;
+  /* o card tem a position: relative porque se nao tiver, o elemento filho (o ::before) não será posicionado corretamente em relação ao card, mas sim em relacao a pagina toda. E como queremos o degrade posicionado na imagem e nao na pagina toda, ele precisa ter o position relative. */
+  position: relative;
+  /* &: :before - significa: &: esta substituindo o .CARD pra nao ficar repetitivo e dar ruim no codigo. Ja o :before esta criando o elemento em cima do Card. Dessa forma da para colocar o degrade e posicionar bem certinho dentro da imagem. */
+    &::before {
+  /* para criar um elemento CSS com HTML precisamos de um content e definir o BG. - depois disso e definido o position absolute para poder colocar o inset. Porque desa forma ele fica absoluto, so que na pagina, e ai na class .card, posicionamos o elemento de acordo com a img e nao de acordo com a pagina toda. */
+      content: "";
+      position: absolute;
+      inset: 0;
+  /* top: 50% serve para centralizar o degrade verticalmente dentro do card, no caso, comecar da metade pra baixo, que e o que queremos. */
+      top: 50%;
+  /* background: linear-gradient() - significa que estamos colocando o degrade no elemento BG selecionado. Primeiro, colocamos a algulacao do degrade: 180Ddeg - segundo, colocamos o transparent 0% porque queremos que ele saia da cor 0% que e o transparente. - terceiro, colocamos a cor que ele precisa chegar que nesse caso e #020617 100%*/
+      background: linear-gradient(
+        180deg, 
+        transparent 0%,
+        #020617 100%
+      );
+    }
+  /* como o figcaption esta dentro do card, posicionamos ele abaixo do before. Mas como o before esta absolute, ele nao vai deixar o figcaption visivel, por isso precisamos de um z-index para ele ficar acima do before. Ele so vai apareecr por cima do Before, quando colocar a osition e o lugar que vai aparecer que nesse caso e o bottom*/
+    figcaption {
+      position: absolute;
+      bottom: 0%;
+      /* adicionamos o padding pra ficar mais espacado */
+      padding: 24px;
+      /* adicionamos o margin top no H2 para dar uma distanciada do span ROBOTICA */
+      h2{
+        margin-top: 8px;
+      }
+    }
+  }
+
 }

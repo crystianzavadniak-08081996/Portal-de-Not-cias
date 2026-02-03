@@ -14,3 +14,19 @@
 .gap-16 {
   gap: 16px;
 }
+/* quando colocamos o .text-2xl , significa que estamos aplicando uma estilização de texto com tamanho extra extra large */
+.text-2xl {
+font: var(--h1);
+}
+/* tamanho extra large */
+.text-xl {
+font: var(--h2);
+}
+/* tamanho large */
+.text-lg{
+font: var(--h3);
+}
+/* tamanho small */
+.text-sm{
+font: var(--text-sm);
+}

@@ -56,3 +56,19 @@ img {
 main {
   margin-top: 40px;
 }
+/* criamos o content-tag porque o codigo precisa ser aplicado independente se e uma div ou uma span, eu quero os dois comportamentos DISPLAY INLINE BLOCK */
+.content-tag {
+/* display inline block, faz com que a box azul em volta do ROBOTICA fique em torno da palavra de forma proporcional, Se fosse um display block, elecobriria o card todo horizontalmente (direita e esquerda) mas se manteria a altura e a base de acordo com a palavra. - o Display inline block ajuda, porque mesmo que o padding seja colocado, ele nao vai crescer de acordo e nao vai calcular correto sem o siplay. Por isso tem que ter. */
+  display: inline-block;
+  background-color: var(--brand-color-dark);
+  padding: 4px 8px;
+  border-radius: 4px;
+/* fonte de peso 500, 10-x, altura de linha de 1.2 */
+  font: 500 10px/1.2 var(--font-family);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-color-primary);
+/* O BOX SHADOW adiciona uma sombra na caixa. 
+box-shadow 10px - o primeiro significa que o efeito de sombra da caixa vai ser aplicado 10px para a direita, o segundo significa que o efeito de sombra vai ser aplicado 10px para baixo, o terceiro significa o blur da sombra e o quarto a cor da sombra */
+box-shadow: 0px 4px 16px rgba(2, 6, 23, 0.251);
+}
