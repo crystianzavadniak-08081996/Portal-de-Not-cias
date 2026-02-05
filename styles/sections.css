@@ -1,3 +1,14 @@
+/* coloco o header dentro do section porque todo o header que estiver dentro do section tem que seguir o que eu colocar aqui */
+section {
+  header{
+    /* dessa forma cria-se a linha que vai dividir as sections */
+    border-top: 1px solid var(--stroke-color);
+    /* o padding-block ja coloca espaco entre os elementos */
+    padding-block: 12px 24px;
+    font: var(--text-span);
+  }
+}
+
 #featured{
   /* aqui, estou estilizando as imagens, colocando a altura certa pra nao ficar espaco sobrando porque tem algumas imagens que sao maiores e outras menores. Mas so colocar altura, estica a imagem, entao o object-fit: cover faz com que ela nao fique esticada e se enquadre no espaco bem certinho. e o Border Radius e pra dar aquela arredondada nas pontas.*/
   img {
@@ -45,4 +56,27 @@
     }
   }
 
+}
+
+#weekly{
+/* o header a, e porque estou arrumando o VER TUDO que e o A que esta dentro do Header. Justify-self: end joga ele pro fim da pagina no lado direito, que e o que eu quero */
+header a{
+  justify-self: end;
+/* esse span dentro do weekly, e o icone da seta para a direita que vai do lado direito do VER TUDO */
+  span {
+    background-image: url(../assets/icons/ArrowRight-white.svg);
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* no HTML depois do header, o primeiro nivel de DIV tem o grid aplicado na class. Para selecionar o primeiro nivel de DIV, colocamos &>div{} */
+&>div {
+  /* usando o grid-template-columns: repeat, como sao 4 imagens, eu quero que o espaco delas seja de 4 colunas com 292px de largura para que elas fiquem adaptadas certinho uma do lado da outra */
+  grid-template-columns: repeat(4, 292px);
+}
+
+img {
+  height: 160px;
+}
 }
