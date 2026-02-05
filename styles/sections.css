@@ -68,6 +68,11 @@ header a{
     width: 16px;
     height: 16px;
   }
+
+  &:hover span {
+    background-image: url(../assets/icons/ArrowRight-hover.svg);
+  }
+
 }
 
 /* no HTML depois do header, o primeiro nivel de DIV tem o grid aplicado na class. Para selecionar o primeiro nivel de DIV, colocamos &>div{} */
@@ -79,4 +84,34 @@ header a{
 img {
   height: 160px;
 }
+}
+
+#weekly header a{
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  gap: 8px;
+  justify-self: end;
+}
+
+#weekly header a span{
+  width: 16px;
+  height: 16px;
+  background-image: url("../assets/icons/ArrowRight-white.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+/* essa configuracao esta sendo feita, para deixar a box azul com o mini titulo (veiculos/hologramas, etc) dentro da imagem  com o content tag e afastado das beiradas da imagem com o top e left 8px. */
+#weekly figure {
+  position: relative;
+  .content-tag {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+  }
+
+  p{
+    margin-top: 8px;
+    font-weight: 800;
+  }
 }

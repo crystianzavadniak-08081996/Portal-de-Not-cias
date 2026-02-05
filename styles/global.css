@@ -55,6 +55,7 @@ img {
 
 main {
   margin-top: 40px;
+  gap: 80px;
 }
 /* criamos o content-tag porque o codigo precisa ser aplicado independente se e uma div ou uma span, eu quero os dois comportamentos DISPLAY INLINE BLOCK */
 .content-tag {
