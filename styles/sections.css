@@ -10,6 +10,7 @@ section {
 }
 
 #featured{
+  grid-area: featured;
   /* aqui, estou estilizando as imagens, colocando a altura certa pra nao ficar espaco sobrando porque tem algumas imagens que sao maiores e outras menores. Mas so colocar altura, estica a imagem, entao o object-fit: cover faz com que ela nao fique esticada e se enquadre no espaco bem certinho. e o Border Radius e pra dar aquela arredondada nas pontas.*/
   img {
     height: 100%;
@@ -59,6 +60,7 @@ section {
 }
 
 #weekly{
+  grid-area: weekly;
 /* o header a, e porque estou arrumando o VER TUDO que e o A que esta dentro do Header. Justify-self: end joga ele pro fim da pagina no lado direito, que e o que eu quero */
 header a{
   justify-self: end;
@@ -115,6 +117,24 @@ img {
     font-weight: 800;
   }
 }
+
+#ai {
+  grid-area: ai;
+img {
+  width: 176px;
+/* aspect-ratio: 1/1 faz a imagem ficar quadrada */
+  aspect-ratio: 1/1;
+/* object-fit: cover para a imagem cobrir todo seu espaco */
+  object-fit: cover;
+}
+
+h3{
+  /* eu poderia colocar margin-top para colocar os 8px de margem em cima e o margin bottom para 4px em baixo. Mas o margin block economiza os comandos, colocando primeiro o top e depois o bottom */
+  margin-block: 8px 4px;
+}
+
+}
+
 /* como a minha setinha para a direita nao deu certo, o chat me ajudou a fazer de outra forma diferente da do professor da rocket seat que ate que funcionou. So que agora, para configurar a ultima sessao de AI, estou tendo que configurar a seta para a direta com o hover sozinho, porque a config que eu tinha com o chat, so funcionou para o weekly. OBS: tentar deixar essa questao da seta com o hover de uma forma que eu possa puxar essa regra sempre que precisar. */
 #ai header a{
   display: grid;
@@ -154,4 +174,23 @@ img {
 
 #more header a:hover span{
   background-image: url("../assets/icons/ArrowRight-hover.svg");
+}
+
+aside {
+  grid-area: aside;
+}
+
+#more {
+  margin-top: 32px;
+  h3 {
+    margin-top: 8px;
+  }
+
+  img {
+    width: 72px;
+    /* aspect ration 1/1 - deixar imagem quadrada */
+    aspect-ratio: 1/1;
+    /* object fit cover - imagem cobre todo o espaco */
+    object-fit: cover;
+  }
 }

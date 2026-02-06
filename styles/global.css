@@ -54,8 +54,19 @@ img {
 }
 
 main {
-  margin-top: 40px;
-  gap: 80px;
+  margin-block: 40px;
+  /* como foi colocado o grid template areas e depois configurado tudo nos sections conforme as obs abaixo, agora da para colocar o row gap de 80px por linha e o column gap de 32px por coluna */
+  row-gap: 80px;
+  column-gap: 32px;
+/*  grid template columns serve para Split the available space into proportional parts. primera coluna 2fr e segunda coluna 1.5fr.  Mas isso so arruma as colunas, ou seja, lateralmente a proporcao do espaco que ocupa (dividem) na row. Mas as colunas ainda estao desproporcionais. A coluna 1 esta mais curta que a 2 ate o momento desse coment. */
+  grid-template-columns: 2fr 1.5fr;
+
+/* utilizando o grid template areas, colocamos as colunas conforme repetimos o nome das sections. Ou seja, 2x featurd equivale a duas colunas. E ai, vamos la no utility para configurar cada um deles la em sections.css: featured, weekly, ai e aside */
+  grid-template-areas: 
+  "featured featured"
+  "weekly weekly"
+  "ai aside" ;
+  /* pelo que entendi, o grid template areas e a forma que a gente enxerga a pagina. Entao na primeira fileira e so o featured nas duas colunas. O weekly segue a mesma ideia. E o AI fica na primeira coluna e o Aside fica na segunda coluna lado a lado um com o outro. Quando vamos em sections e colocamos o grid-area seguido do nome, eles se posicionam na pagina. */
 }
 /* criamos o content-tag porque o codigo precisa ser aplicado independente se e uma div ou uma span, eu quero os dois comportamentos DISPLAY INLINE BLOCK */
 .content-tag {
