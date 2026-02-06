@@ -115,3 +115,43 @@ img {
     font-weight: 800;
   }
 }
+/* como a minha setinha para a direita nao deu certo, o chat me ajudou a fazer de outra forma diferente da do professor da rocket seat que ate que funcionou. So que agora, para configurar a ultima sessao de AI, estou tendo que configurar a seta para a direta com o hover sozinho, porque a config que eu tinha com o chat, so funcionou para o weekly. OBS: tentar deixar essa questao da seta com o hover de uma forma que eu possa puxar essa regra sempre que precisar. */
+#ai header a{
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  gap: 8px;
+  justify-self: end;  
+}
+
+#ai header a span{
+  width: 16px;
+  height: 16px;
+  background-image: url("../assets/icons/ArrowRight-white.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#ai header a:hover span{
+  background-image: url("../assets/icons/ArrowRight-hover.svg");
+}
+
+#more header a{
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  gap: 8px;
+  justify-self: end;  
+}
+
+#more header a span{
+  width: 16px;
+  height: 16px;
+  background-image: url("../assets/icons/ArrowRight-white.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#more header a:hover span{
+  background-image: url("../assets/icons/ArrowRight-hover.svg");
+}
